@@ -1,0 +1,9 @@
+2026-01-26 14:10:59,739: Special key: Key.ctrl_l
+2026-01-26 14:11:00,246: Key pressed: 
+2026-01-26 14:11:00,559: Special key: Key.backspace
+2026-01-26 14:11:01,282: Key pressed: h
+2026-01-26 14:11:01,564: Key pressed: e
+2026-01-26 14:11:02,122: Key pressed: l
+2026-01-26 14:11:02,297: Key pressed: l
+2026-01-26 14:11:02,478: Key pressed: o
+2026-01-26 14:11:06,793: Special key: Key.esc
