@@ -1,0 +1,23 @@
+# Task 3: Lost Data Retrieval - Arch Technologies
+
+## Project Overview
+This project demonstrates the process of forensic data recovery from a removable storage device. The goal was to simulate accidental data loss and use industry-standard tools to retrieve the lost information successfully.
+
+## Technical Specifications
+* **Device:** 16GB USB Flash Drive
+* **File System:** FAT32
+* **Tool Used:** Recuva (v1.54.120)
+* **Target File:** Cyber Security (Month 2).pdf
+
+## Methodology
+1. **Scenario Simulation:** A PDF file was stored on a FAT32 formatted drive and then permanently deleted.
+2. **Scanning:** Used Recuva to perform a targeted scan of the `E:\` drive.
+3. **Identification:** The tool identified the file `Cyber Security (Month 2).pdf` with an "Excellent" state, meaning it had not been overwritten.
+4. **Recovery:** The file was restored to a separate local directory (`C:\Downloads\Recover Folder`) to prevent data corruption.
+
+## Results
+* **Recovery Status:** 100% Successful
+* **File Integrity:** The recovered PDF remains fully functional and readable.
+
+## Evidence
+Screenshots of the recovery process are located in the `/screenshots` folder.
