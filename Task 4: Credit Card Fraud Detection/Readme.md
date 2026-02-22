@@ -1,35 +1,30 @@
-Task 4: Credit Card Fraud Detection
-Project Overview
-This project involves building a machine learning model to identify fraudulent credit card transactions. The dataset contains transactions made by European cardholders, where the objective is to classify transactions as either Legitimate (0) or Fraudulent (1).
+# Task 4: Credit Card Fraud Detection
 
-Key Challenges
-Class Imbalance: Fraudulent transactions represent a very small fraction of the total data (less than 1%).
+## Project Goal
+The objective of this task is to develop a robust machine learning classification model to identify fraudulent credit card transactions. By analyzing transaction patterns, the model aims to minimize financial risk and improve security for cardholders.
 
-Feature Scaling: Features like 'Amount' have a much wider range than the anonymized 'V' variables, requiring normalization.
+## Technical Overview
+* **Programming Language:** Python
+* **Development Environment:** Google Colab
+* **Key Libraries:** Pandas, Scikit-learn, Matplotlib, Seaborn
 
-Technical Implementation
-Data Preprocessing: Used StandardScaler to normalize the transaction amount, ensuring it does not bias the model due to its scale.
+## Methodology
+The following technical steps were implemented to ensure high detection accuracy:
 
-Handling Imbalance: Implemented the class_weight='balanced' parameter in the Logistic Regression model to ensure the minority (Fraud) class is given appropriate importance during training.
+1. **Data Preprocessing:** Standardized the "Amount" feature using `StandardScaler` to ensure the model is not biased by varying transaction scales.
+2. **Handling Class Imbalance:** Since fraud cases are rare, the model was trained using `class_weight='balanced'`. This ensures the minority class (Fraud) receives appropriate weight during the training phase.
+3. **Data Splitting:** Utilized a stratified 80/20 train-test split to maintain the proportional representation of fraud cases in both training and evaluation sets.
 
-Data Splitting: Performed a stratified train-test split (80/20) to maintain the original distribution of fraud cases in both sets.
+## Performance Metrics
+The model was evaluated using a classification report and a confusion matrix with the following results:
+* **Recall (Fraud Class):** **0.92** – Successfully identified 92% of all fraudulent activities.
+* **Overall Accuracy:** **0.97**.
+* **Optimization Priority:** Focused on **Recall** as the primary metric to ensure maximum detection of actual fraud cases.
 
-Model Performance
-The model was evaluated using a classification report and a confusion matrix to prioritize Recall, as catching fraud is more critical than avoiding false alarms in this context.
+## Repository Files
+* `Creditcard_Fraud_Detection.ipynb`: The primary Python notebook containing the full implementation.
+* `Confusion_Matrix.png`: Heatmap visualization showing the model's prediction accuracy.
+* `Classification_Report.txt`: Full breakdown of Precision, Recall, and F1-score for both classes.
 
-Classification Report Summary:
-Accuracy: 97%
-
-Recall (Class 1 - Fraud): 0.92 (92%)
-
-Precision (Class 1 - Fraud): 0.06
-
-Confusion Matrix Insights:
-The model successfully identified the majority of fraudulent cases, which is demonstrated in the high Recall score of 0.92.
-
-Tools Used
-Language: Python
-
-Environment: Google Colab
-
-Libraries: Pandas, Scikit-learn, Seaborn, Matplotlib
+---
+**Note:** This project was completed as part of the Arch Technologies internship program.
